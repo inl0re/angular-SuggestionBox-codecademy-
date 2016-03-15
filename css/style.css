@@ -1,0 +1,68 @@
+/* Project style file */
+html body {
+  background-color: #272A33;
+  color: #fff;
+}
+
+.wrapper {
+  margin: 0 auto;
+  width: 500px;
+  min-height: 500px;
+}
+
+.header h1 {
+  padding: 10px;
+  text-align: center;
+  font-style: italic;
+  color: #6FD0E8;
+  border-bottom: 1px solid #fff;
+}
+
+/*-- home.html --*/
+.post {
+  padding-bottom: 30px;
+  border-bottom: 1px dashed #fff;
+}
+
+.post-info i,
+.comment-info i {
+  color: #26F63C;
+  cursor: pointer;
+}
+
+.post .upvotes::after {
+  content: '';
+  margin-right: 5px;
+  margin-left: 5px;
+  border-right: 1px solid #fff;
+}
+
+
+.submit-form-wrapper h3 {
+  color: #6FD0E8;
+}
+
+.submit-form input[type='text'] {
+  width: 100%;
+  padding: 5px;
+  border-radius: 1px;
+  border: none;
+  color: #000;
+}
+
+.submit-form button {
+  margin-top: 15px;
+  padding: 5px 15px;
+  background-color: #1F96C1;
+  border: 0;
+}
+
+/*-- post.html --*/
+.comments {
+  padding-left: 20px;
+}
+
+.comment {
+  padding: 20px 0;
+  border-bottom: 1px dashed #fff;
+}

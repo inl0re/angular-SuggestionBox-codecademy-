@@ -1,0 +1,24 @@
+<div class="post">
+  <h2>{{ post.title }}</h2>
+  <div class="post-info">
+    <i ng-click="upVote(post)" class="glyphicon glyphicon-plus-sign"></i>
+    <span class="upvotes">Upvotes: {{ post.upvotes }}</span>comments: {{ comments.length }}
+  </div>
+</div>
+<div class="comments">
+  <h2>Comments</h2>
+  <div class="comment" ng-repeat="comment in comments | orderBy:'-upvotes'">
+    <p>{{ comment.body }}</p>
+    <div class="comment-info">
+      <i ng-click="upVote(comment)" class="glyphicon glyphicon-plus-sign"></i>
+      <span class="upvotes">Upvotes: {{ comment.upvotes }}</span>
+    </div>
+  </div>
+</div>
+<div class="submit-form-wrapper">
+  <form class="submit-form">
+    <label for="input-comment"><h3>Submit your comment</h3></label>
+    <input id="input-comment" type="text" placeholder="Great comments here" ng-model="body"></input><br>
+    <button type="submit" ng-click="addComment()">Comment</button>
+  </form>
+</div>

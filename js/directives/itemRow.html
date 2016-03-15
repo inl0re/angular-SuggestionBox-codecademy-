@@ -1,0 +1,15 @@
+
+  <td name="itemName">
+    <span ng-hide="editingName" ng-dblclick="editingName = true">{{ expense.name }}</span>
+    <form ng-show="editingName" ng-submit="editingName = false">
+      <input ng-model="expense.name"  type="text" ng-pattern="/[а-яА-ЯёЁa-zA-Z0-9]+/" required>
+      <button type="submit" class="btn-xs"><i class="glyphicon glyphicon-ok"></i></button>
+    </form>
+  </td>
+  <td name="itemCost">
+    <span ng-hide="editingCost" ng-dblclick="editingCost = true" >{{ expense.cost }}</span>
+    <form ng-show="editingCost" ng-submit="editingCost = false; editItem()">
+      <input ng-model="expense.cost" type="number" ng-pattern="/\d+/" required>
+      <button class="btn-xs"><i class="glyphicon glyphicon-ok"></i></button>
+    </form>
+  </td>
